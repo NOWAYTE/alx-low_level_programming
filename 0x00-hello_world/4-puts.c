@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - A program that print a line with  a function
- * Return : when (0) means success
+ * Return: 0 means successt 
  */
 int main(void)
 {
