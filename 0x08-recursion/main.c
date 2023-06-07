@@ -1,7 +1,7 @@
 #include "main.h"
 int main()
 {
-	_puts_recursion("puts with recursion");
+	_print_rev_recursion("puts with recursion");
 
 	return (0);
 }
