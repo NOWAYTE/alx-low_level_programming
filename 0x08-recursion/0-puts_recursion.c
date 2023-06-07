@@ -21,10 +21,3 @@ void _puts_recursion(char *s)
 		}
 	}
 }
-int main()
-{
-	_puts_recursion("puts with recursion");
-
-	return (0);
-
-}
