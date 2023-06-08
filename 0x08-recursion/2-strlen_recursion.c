@@ -10,15 +10,13 @@
  * return: Always 0 (success)
  */
 
-int i;
-
 int _strlen_recursion(char *s)
 {
 	if (*s != '\0')
 	{
-		i++;
+		//i++;
 
-		_strlen_recursion(s + 1);
+		return (i =  1 + _strlen_recursion(s + 1);
 	}
   
        return (i);
