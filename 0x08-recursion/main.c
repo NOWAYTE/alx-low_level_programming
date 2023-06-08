@@ -3,7 +3,7 @@ int main()
 {
 	int r;
 
-	r = _sqrt_recursion(1024);
+	r = _strlen_recursion("Hello world");
 
 	printf("%d", r);
 
