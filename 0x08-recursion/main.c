@@ -3,9 +3,9 @@ int main()
 {
 	int r;
 
-	r = _strlen_recursion("Hello world");
+	r = _sqrt_recursion(16);
 
-	printf("%c", r);
+	printf("%d", r);
 
 	return (0);
 }

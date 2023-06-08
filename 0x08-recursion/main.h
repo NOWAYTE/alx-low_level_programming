@@ -4,6 +4,7 @@
 #include<stdlib.h>
 #include<stddef.h>
 #include<unistd.h>
+int _sqrt_function_helper(int a, int b);
 int _putchar(char s);
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
