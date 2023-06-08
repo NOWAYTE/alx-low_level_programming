@@ -4,6 +4,7 @@
 #include<stdlib.h>
 #include<stddef.h>
 #include<unistd.h>
+int is_prime_number_helper(int a, int b);
 int _sqrt_function_helper(int a, int b);
 int _putchar(char s);
 void _puts_recursion(char *s);
