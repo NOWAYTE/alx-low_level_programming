@@ -7,19 +7,16 @@
  * main - Entry to the program
  *
  *
- * return: Always 0 (success)
+ * Return: Always 0 (success)
  */
 
 int _strlen_recursion(char *s)
-{ 
+{
 
 	if (*s == '\0')
 	{
 		return (0);
 
 	}
-	return (_strlen_recursion(s + 1) + 1);
- 
-       
+	return ((_strlen_recursion(s + 1) + 1));
 }
-
