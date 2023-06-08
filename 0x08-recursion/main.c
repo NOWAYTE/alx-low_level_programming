@@ -5,7 +5,7 @@ int main()
 
 	r = _strlen_recursion("Hello world");
 
-	printf("%d", r);
+	printf("%c", r);
 
 	return (0);
 }
