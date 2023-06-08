@@ -17,7 +17,11 @@ int is_prime_number(int n)
 }
 int is_prime_number_helper(int a, int b)
 {
-	if ( a % b !=  0 && a == b)
+	if ( a % b != 0)
+	{
+		return (1);
+	}
+	else if( a == b)
 	{
 		return (1);
 	}
