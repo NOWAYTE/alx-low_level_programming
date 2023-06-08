@@ -3,7 +3,7 @@ int main()
 {
 	int r;
 
-	r = _sqrt_recursion(16);
+	r = is_prime_number(17);
 
 	printf("%d", r);
 
