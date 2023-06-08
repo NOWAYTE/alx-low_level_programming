@@ -13,7 +13,7 @@ int is_prime_number(int n)
 		return (0);
 	}
 
-	return (is_prime_number_helper(n, 0));
+	return (is_prime_number_helper(n, 2));
 }
 int is_prime_number_helper(int a, int b)
 {
