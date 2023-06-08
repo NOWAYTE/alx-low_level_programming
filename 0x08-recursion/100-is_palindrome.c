@@ -34,7 +34,7 @@ int is_palindrome_helper(char *s, int a, int b)
 		return (0);
 	}
 
-	return (is_palindrome_helper(s, a + 1, a - 1));
+	return (is_palindrome_helper(s, a + 1, b - 1));
 }
 /**
  * char_array - return lenght
@@ -43,7 +43,7 @@ int is_palindrome_helper(char *s, int a, int b)
  */
 int char_array(char *s)
 {
-	return length((s, 0));
+	return (length(s, 0));
 }
 /**
  * length - calculates the length
@@ -57,5 +57,5 @@ int length(char *s, int i)
 	{
 		return (i);
 	}
-	return length((s + 1, i + 1));
+	return (length(s + 1, i + 1));
 }
