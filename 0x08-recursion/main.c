@@ -3,7 +3,7 @@ int main()
 {
 	int r;
 
-	r = is_prime_number(17);
+	r = is_palindrome("level");
 
 	printf("%d", r);
 

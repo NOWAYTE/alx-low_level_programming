@@ -4,6 +4,9 @@
 #include<stdlib.h>
 #include<stddef.h>
 #include<unistd.h>
+int length(char *s, int i);
+int is_palindrome_helper(char *s,int a, int b);
+int char_array(char *s);
 int is_prime_number_helper(int a, int b);
 int _sqrt_function_helper(int a, int b);
 int _putchar(char s);
