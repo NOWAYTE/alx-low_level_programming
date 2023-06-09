@@ -22,7 +22,7 @@ int wildcmp(char *s1, char *s2)
 	}
 	if (*s2 == '*')
 	{
-		if (*(s2 + 2) != '\0')
+		if (*(s2 + 1) != '\0')
 		{
 			return (0);
 		}
@@ -42,5 +42,5 @@ int wildcmp(char *s1, char *s2)
 	return (0);
 }
 
-	
+
 
