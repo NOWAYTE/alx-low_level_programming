@@ -20,8 +20,8 @@ int is_palindrome(char *s)
  * is_palindrome_helper - checks for similarity
  * @a: integer parameter
  * @b: integer parameter
- * @s: pointer to character 
- * Return: calls itself recursively 
+ * @s: pointer to character
+ * Return: calls itself recursively
  */
 int is_palindrome_helper(char *s, int a, int b)
 {
@@ -37,10 +37,12 @@ int is_palindrome_helper(char *s, int a, int b)
 	return (is_palindrome_helper(s, a + 1, b - 1));
 }
 /**
- * char_array - return lenght
- * @s - pointer to character
- * Return : length
+ * char_array - returns the length
+ * @s: pointer to a character
+ *
+ * Return: value
  */
+
 int char_array(char *s)
 {
 	return (length(s, 0));
