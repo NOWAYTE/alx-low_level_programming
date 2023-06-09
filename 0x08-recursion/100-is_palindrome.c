@@ -27,7 +27,7 @@ int is_palindrome_helper(char *s, int a, int b)
 {
 	if (a >= b)
 	{
-		return (0);
+		return (1);
 	}
 	else if (s[a] != s[b])
 	{
