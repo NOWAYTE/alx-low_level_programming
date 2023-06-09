@@ -3,7 +3,7 @@ int main()
 {
 	int r;
 
-	r = is_palindrome("level");
+	r = wildcmp("main.c", "*.c");
 
 	printf("%d", r);
 
