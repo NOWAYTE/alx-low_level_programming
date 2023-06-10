@@ -2,18 +2,18 @@
 /**
  * main -Entry to the program
  *
- * @argc: Argument count 
+ * @argc: Argument count
  * @argv: Argument vector
  *
- * return: Always 0 (success)
+ * Return: Always 0 (success)
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 
-	if(argc)
+	if (argc)
 	{
 		printf(argv[0]);
-		printf('\n');
+		printf("\n");
 	}
 
 	return (0);
