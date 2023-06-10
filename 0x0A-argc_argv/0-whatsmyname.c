@@ -12,8 +12,8 @@ int main(int argc, char *argv[])
 
 	if (argc)
 	{
-		printf(argv[0]);
-		printf("\n");
+		_putchar(argv[0]);
+		_putchar('\n');
 	}
 
 	return (0);
