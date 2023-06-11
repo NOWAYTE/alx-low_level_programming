@@ -7,14 +7,10 @@
  *
  * Return: Always 0 (success)
  */
-int main(int argc, char *argv[])
+int main(int argc __attribute((unused)), char *argv[])
 {
-
-	if (argc)
-	{
-		printf("%d", argv[0]);
-		printf("\n");
-	}
+	printf("%s", argv[0]);
+	printf("\n");
 
 	return (0);
 }
