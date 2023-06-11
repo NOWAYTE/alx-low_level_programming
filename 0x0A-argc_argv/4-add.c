@@ -11,33 +11,33 @@
  */
 int main(int argc, char *argv[])
 {
-	int i = 0;
-	int j ;
+	int x;
 
 	if (argc < 2)
 	{
-		printf("%d", i);
+		printf("%d\n", 0);
 	}
-	
-	for (i = 0; i < argc; i++)
+
+	for (int i = 0; i < argc; i++)
 	{
-		char  *ptr;
+		char *ptr;
 
-		long x = strtol(argv[i], &ptr, 10);
+		long r = strtol(argv[i], &ptr, 10);
 
-		if (*ptr == '\0')
+		x += r;
+
+		if (r < 0)
 		{
-			j += x;
-		}
-		else
-		{
-		printf("Error");
+			printf("Error");
 
-		return (1);
+			return (1);
 		}
-	}	
-	
-	printf("%d", j);
 
-	return (0);	
-}
+	}
+
+	printf("%d", x);
+
+	return (0);
+
+
+}	
