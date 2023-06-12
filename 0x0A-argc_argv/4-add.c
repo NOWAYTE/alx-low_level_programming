@@ -12,7 +12,7 @@
  */
 int checker(char *arg)
 {
-	for (int i = 0; arg[i] != '\0'; i++)
+	for (int i = 0; i != '\0'; i++)
 	{
 		if(!isdigit(arg[i]))
 		{
