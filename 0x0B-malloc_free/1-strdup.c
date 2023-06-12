@@ -12,9 +12,9 @@ char *_strdup(char *str)
 	int i;
 	int array;
 	int x;
-	char *mem;
+	char *mem = NULL;
 
-	for (i = 0; i != '\0'; i++)
+	for (i = 0; ptr[i] != '\0'; i++)
 	{
 		ptr[i] = *str;
 
