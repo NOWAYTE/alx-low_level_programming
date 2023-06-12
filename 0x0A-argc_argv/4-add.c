@@ -10,7 +10,9 @@
  */
 int checker(char *arg)
 {
-	for (int i = 0; i != '\0'; i++)
+	int i;
+
+	for (i = 0; i != '\0'; i++)
 	{
 		if (!isdigit(arg[i]))
 		{
@@ -30,12 +32,13 @@ int checker(char *arg)
 int main(int argc, char *argv[])
 {
 	int x = 0;
+	int i;
 
 	if (argc < 1)
 	{
 		printf("0\n");
 	}
-	for (int i = 0; i < argc; i++)
+	for (i = 0; i < argc; i++)
 	{
 		if (checker(argv[i]))
 		{
