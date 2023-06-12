@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		printf("%d\n", 0);
 	}
 
-	for (int i = 0; i < argc; i++)
+	for (int i = 1; i < argc; i++)
 	{
 		char *ptr;
 
