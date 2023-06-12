@@ -19,6 +19,10 @@ char *_strdup(char *str)
 	}
 
 	mem = malloc(sizeof(char) * array + 1);
+	if (mem == NULL)
+	{
+		return (NULL);
+	}
 
 	for (x = 0; i < array; i++)
 	{
