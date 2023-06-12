@@ -8,15 +8,16 @@
 char *_strdup(char *str)
 {
 	int i;
-	int array;
+	int array = 0;
 	int x;
 	char *mem;
+
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != NULL; i++)
 	{
 
 		array  = i + 1;
