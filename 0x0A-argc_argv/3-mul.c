@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
 	if (argc < 1)
 	{
 		printf("Error");
+
+		return (1);
 	}
 	x = atoi(argv[1]);
 	y = atoi(argv[2]);
