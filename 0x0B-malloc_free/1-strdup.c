@@ -8,11 +8,11 @@
 char *_strdup(char *str)
 {
 
-	char *ptr = NULL;
+	char *ptr;
 	int i;
 	int array;
 	int x;
-	char *mem = NULL;
+	char *mem;
 
 	for (i = 0; ptr[i] != '\0'; i++)
 	{
