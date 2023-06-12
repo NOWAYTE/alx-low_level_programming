@@ -7,14 +7,12 @@
  */
 char *_strdup(char *str)
 {
-
-	char *ptr = NULL;
 	int i;
 	int array;
 	int x;
 	char *mem;
 
-	for (i = 0; ptr[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 
 		array  = i + 1;
