@@ -2,13 +2,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 /**
- * main - Entry to the program 
+ * main - Entry to the program
+ * @argc: Argument count
+ * @argv: Argument vector
  *
- * @argc: Argument count 
- * @arv: Argument vector 
- *
- * Return - Always 0 (succes)
- *
+ * Return: Always 0 (success)
  */
 int main(int argc, char *argv[])
 {
@@ -23,7 +21,7 @@ int main(int argc, char *argv[])
 		return (1);
 
 	}
-	
+
 	r = atoi(argv[1]);
 
 	if (r < 0)
@@ -33,13 +31,13 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	y += r/25;
+	y += r / 25;
 	r %= 25;
-	y += r/10;
+	y += r / 10;
 	r %= 10;
-	y += r/5;
+	y += r / 5;
 	r %= 5;
-	y += r/2;
+	y += r / 2;
 	r %= 2;
 
 	y += r;
