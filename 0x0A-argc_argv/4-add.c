@@ -19,17 +19,7 @@ int main(int argc, char * argv[])
 	}
 	for (int i = 1; i < argc; i++)
 	{
-		char *ptr;
-		int i = strtol(argv[i], &ptr, 10);
-
-		if (*ptr != '\0')
-		{
-			printf("Error");
-
-			return (1);
-		}
-
-		x += i;
+		x += atoi(argv[i]);
 	}
 
 	printf("%d\n", x);
