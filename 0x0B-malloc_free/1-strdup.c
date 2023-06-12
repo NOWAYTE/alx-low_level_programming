@@ -8,7 +8,7 @@
 char *_strdup(char *str)
 {
 
-	char *ptr;
+	char *ptr = NULL;
 	int i;
 	int array;
 	int x;
@@ -16,7 +16,7 @@ char *_strdup(char *str)
 
 	for (i = 0; i != '\0'; i++)
 	{
-		ptr[i] = str;
+		ptr[i] = *str;
 
 		array  = i;
 	}
@@ -28,5 +28,5 @@ char *_strdup(char *str)
 		mem[x] = ptr[x];
 	}
 
-	return (&mem);
+	return (mem);
 }
