@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int r;
 	int y = 0;
 
-	if (argc != 1)
+	if (argc != 2)
 	{
 		printf("Error");
 		printf("\n");
