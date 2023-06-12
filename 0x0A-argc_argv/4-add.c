@@ -3,18 +3,16 @@
 #include<stdlib.h>
 #include<ctype.h>
 /**
- * main - Entry to the program 
+ * checker - check for non digit value
+ * @arg: character parameter
  *
- * @argc: Argument count 
- * @argv: Argument vector
- *
- * Return: ALways 0 (sucess)
+ * Return: return bool;
  */
 int checker(char *arg)
 {
 	for (int i = 0; i != '\0'; i++)
 	{
-		if(!isdigit(arg[i]))
+		if (!isdigit(arg[i]))
 		{
 			return (0);
 		}
@@ -22,8 +20,14 @@ int checker(char *arg)
 
 	return (1);
 }
-
-int main(int argc, char * argv[])
+/**
+ * main - Entry to the program
+ * @argc: Argument count
+ * @argv: Argument vector
+ *
+ * Return: Always 0 (success)
+ */
+int main(int argc, char *argv[])
 {
 	int x = 0;
 
@@ -50,5 +54,5 @@ int main(int argc, char * argv[])
 
 	return (0);
 
-}	
+}
 
