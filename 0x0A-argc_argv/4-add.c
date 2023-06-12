@@ -22,16 +22,16 @@ int main(int argc, char *argv[])
 	{
 		char *ptr;
 
-		long r = strtol(argv[i], &ptr, 10);
+		int r = strtol(argv[i], &ptr, 10);
 
-		x += r;
-
-		if (r < 0)
+		if (*ptr != '\0')
 		{
 			printf("Error");
 
 			return (1);
 		}
+
+		x += r;
 
 	}
 
