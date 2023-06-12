@@ -16,7 +16,6 @@ char *_strdup(char *str)
 
 	for (i = 0; ptr[i] != '\0'; i++)
 	{
-		ptr[i] = *str;
 
 		array  = i + 1;
 	}
