@@ -35,7 +35,7 @@ int main(int argc, char * argv[])
 	{
 		if (checker(argv[i]))
 		{
-			x += atoi(argv[i]);
+			x += strtol(argv[i], NULL, 10);
 		}
 
 		else
