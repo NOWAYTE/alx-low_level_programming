@@ -24,8 +24,8 @@ int **alloc_grid(int width, int height)
 	z = calloc(height, sizeof(int *));
 	if (z == NULL)
 	{
-		return (NULL);
 		free(z);
+		return (NULL);
 	}
 
 	for (i = 0; i < height; i++)
@@ -35,14 +35,12 @@ int **alloc_grid(int width, int height)
 		if (z[i] == NULL)
 		{
 			int x;
-			int **y;
 
 			for (x = 0; x < i; x++)
 			{
 				free(z[x]);
 			}
-			y = realloc(z, 0);
-			free(y);	
+			free(z);
 			return (NULL);
 		}
 
