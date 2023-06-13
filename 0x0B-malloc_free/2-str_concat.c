@@ -9,6 +9,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
+	char *array;
 	int x = 0;
 	int y = 0;
 	int z = 0;
@@ -36,13 +37,24 @@ char *str_concat(char *s1, char *s2)
 	{
 		for (i = 0; s1[i] != '\0'; i++)
 		{
+
 			ptr[i] = s1[i];
+			array += ptr[i];
 		}
+		if (array == NULL)
+		{
+			return (ptr);
 
 		for (i = 0; s2[i] != '\0'; i++)
 		{
 			ptr[i + x] += s2[i];
+
+			array += ptr[i + x];
 		}
+
+		if (array == NULL)
+		{
+			return ptr;
 	}
 
 	return (ptr);
