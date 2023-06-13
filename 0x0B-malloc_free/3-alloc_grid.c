@@ -12,11 +12,11 @@ int **alloc_grid(int width, int height)
 	int i;
 	int **z;
 
-	if (height == 0 || height == -(height))
+	if (height == 0 || height < 0)
 	{
 		return (NULL);
 	}
-	if (width == 0 || width == -(width))
+	if (width == 0 || width == < 0)
 	{
 		return (NULL);
 	}
