@@ -21,7 +21,7 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	z = calloc(height, sizeof(int *));
+	z = malloc(height, sizeof(int *));
 	if (z == NULL)
 	{
 		free(z);
