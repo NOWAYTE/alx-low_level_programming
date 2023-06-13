@@ -44,6 +44,7 @@ char *str_concat(char *s1, char *s2)
 		if (array == NULL)
 		{
 			return (ptr);
+		}
 
 		for (i = 0; s2[i] != '\0'; i++)
 		{
@@ -55,6 +56,7 @@ char *str_concat(char *s1, char *s2)
 		if (array == NULL)
 		{
 			return ptr;
+		}
 	}
 
 	return (ptr);
