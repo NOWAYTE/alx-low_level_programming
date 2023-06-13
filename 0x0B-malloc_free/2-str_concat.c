@@ -8,8 +8,8 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *str_1;
-	char *str_2;
+	char *str_1 = NULL;
+	char *str_2 = NULL;
 	char *ptr;
 	int x = 0;
 	int y = 0;
@@ -18,14 +18,14 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; i != '\0'; i++)
 	{
-		str_1[i] = s1;
+		str_1[i] = *s1;
 
 		x = i;
 	}
 	
 	for (i = 0; i != '\0'; i++)
 	{
-		str_2 = s2;
+		str_2[i] = *s2;
 		
 		y = i;
 	}
