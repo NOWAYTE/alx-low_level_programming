@@ -21,15 +21,20 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	z = calloc(sizeof(int), width);
+	z = calloc(width, sizeof(int));
 	if (z == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; i <= height; i++)
+	for (i = 0; i < height; i++)
 	{
-		z[i] = calloc(sizeof(int), height);
+		z[i] = calloc(height, sizeof(int));
+
+		if (z == NULL)
+		{
+			free(z);
+		}
 
 	}
 
