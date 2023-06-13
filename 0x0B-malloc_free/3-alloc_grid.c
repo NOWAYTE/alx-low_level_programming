@@ -35,13 +35,14 @@ int **alloc_grid(int width, int height)
 		if (z[i] == NULL)
 		{
 			int x;
+			int y;
 
 			for (x = 0; x < i; x++)
 			{
 				free(z[x]);
 			}
-
-			free(z);
+			y = realloc(z, 0);
+			free(y);	
 			return (NULL);
 		}
 
