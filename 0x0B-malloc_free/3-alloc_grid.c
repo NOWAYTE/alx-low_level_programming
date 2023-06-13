@@ -14,14 +14,14 @@ int **alloc_grid(int width, int height)
 
 	if (height == 0 || height == -(height))
 	{
-		return (NULL)
+		return (NULL);
 	}
 	if (width == 0 || width == -(width))
 	{
 		return (NULL);
 	}
 
-	z = realloc(sizeof(int) * width);
+	z = calloc(sizeof(int), width);
 	if (z == NULL)
 	{
 		return (NULL);
@@ -29,8 +29,9 @@ int **alloc_grid(int width, int height)
 
 	for (i = 0; i <= height; i++)
 	{
-		z[i] = realloc(sizeof(int) * height);
+		z[i] = calloc(sizeof(int), height);
 
 	}
 
 	return (z);
+}
