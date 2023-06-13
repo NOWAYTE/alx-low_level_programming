@@ -16,13 +16,13 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; s1[i] != '\0'; i++)
 	{
-		x = i;
+		x = i + 1;
 	}
 
 	for (i = 0; s2[i] != '\0'; i++)
 	{
 
-		y = i;
+		y = i + 1;
 	}
 	z = x + y;
 
