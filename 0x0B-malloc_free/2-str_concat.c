@@ -9,24 +9,24 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
-	char *array;
 	int x = 0;
 	int y = 0;
 	int z = 0;
 	int i;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	for (i = 0; s1[i] != '\0'; i++)
 	{
 		x = i + 1;
 	}
-
 	for (i = 0; s2[i] != '\0'; i++)
 	{
-
 		y = i + 1;
 	}
 	z = x + y;
-
 	ptr = malloc(sizeof(char) * z + 1);
 
 	if (ptr == NULL)
@@ -37,27 +37,12 @@ char *str_concat(char *s1, char *s2)
 	{
 		for (i = 0; s1[i] != '\0'; i++)
 		{
-
 			ptr[i] = s1[i];
-			array += ptr[i];
 		}
-		if (array == NULL)
-		{
-			return (ptr);
-		}
-
 		for (i = 0; s2[i] != '\0'; i++)
 		{
 			ptr[i + x] += s2[i];
-
-			array += ptr[i + x];
-		}
-
-		if (array == NULL)
-		{
-			return ptr;
 		}
 	}
-
 	return (ptr);
 }
