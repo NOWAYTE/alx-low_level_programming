@@ -4,7 +4,7 @@
  *
  * @s1: character pointer parameter
  * @s2: character pointer parameter
- * @n: integer parameter 
+ * @n: integer parameter
  *
  * Return: returns the value of newly allocated space
  *
@@ -16,12 +16,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int y;
 	char *str;
 	unsigned int len = 0;
-	
+
 	while (s1[x] != '\0')
 	{
 		x++;
 	}
-	while (s2[len] != '\0') 
+	while (s2[len] != '\0')
 	{
 		len++;
 	}
@@ -46,5 +46,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	return (str);
-}	
+}
 
