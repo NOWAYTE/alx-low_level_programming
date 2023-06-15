@@ -9,10 +9,10 @@
 char **strtow(char *str)
 {
 	int i;
-	int **ptr;
+	char *ptr;
 	int len = 0;
 
-	if (str == NULL || str  == "")
+	if (str == NULL)
 	{
 		return (NULL);
 	}
@@ -35,7 +35,8 @@ char **strtow(char *str)
 	}
 	printf("%s\n",  ptr);
 
-	return (ptr);
+	return ((char **)(ptr));
+}
 
 
 
