@@ -5,7 +5,7 @@
  * @nmemb: integer parameter
  * @size: integer parameter
  *
- * Return: returns pointer to the memory 
+ * Return: returns pointer to the memory
  *
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -29,5 +29,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		array[i] = 0;
 	}
 
-	return (void *)(array);
+	return ((void *)(array));
 }
