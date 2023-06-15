@@ -23,7 +23,7 @@ char **strtow(char *str)
 	}
 	len += 1;
 
-	ptr = malloc(sizeof(int) * len);
+	ptr = malloc(sizeof(char) * len);
 	if (ptr == NULL)
 	{
 		return (NULL);
