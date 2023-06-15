@@ -8,34 +8,46 @@
  */
 char **strtow(char *str)
 {
-	int i;
-	char *ptr;
-	int len = 0;
+	int i = 0;
+	char **string;
+	int length = 0;
+	char *s;
 
-	if (str == NULL)
+	if (str == NULL || *str == '\0')
 	{
 		return (NULL);
 	}
+
+	for(s = str; *s != '\0'; s++)
+	{
+		if (*s == ' ')
+		{
+			length ++;
+		}
+	}
+	length ++;
+
+	string = malloc(sizeof(char *) * length);
+
+	if (string  == NULL)
+	{
+		return (NULL);
+	}
+
+	for (s = str; *s != '\0'; s++)
+	{
+		if (*s == ' ')
+		{
+			string[i++] = s + 1;
+		}
+	}
+
+	string[i] = NULL;
+
+	return string;
+
+
 	
-	for (i = 0; str[i] != '\0';  i++)
-	{
-		len ++;
-	}
-	len += 1;
-
-	ptr = malloc(sizeof(char) * len);
-	if (ptr == NULL)
-	{
-		return (NULL);
-	}
-
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		ptr[i] = str[i];
-	}
-	printf("%s\n",  ptr);
-
-	return ((char **)(ptr));
 }
 
 
