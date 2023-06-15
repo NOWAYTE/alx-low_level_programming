@@ -3,8 +3,8 @@ int main(void)
 {
 	char *c;
 	
-	c = malloc_checked(sizeof(char) * 1024);
-	printf("%p", (void *)c);
+	c = string_nconcat("Best ", "School !!!", 6);
+	printf("%s\n", c);
 
 	return (0);
 }
