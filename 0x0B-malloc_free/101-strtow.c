@@ -22,10 +22,10 @@ char **strtow(char *str)
 	{
 		if (*s == ' ')
 		{
-			length ++;
+			length++;
 		}
 	}
-	length ++;
+	length++;
 
 	string = malloc(sizeof(char *) * length);
 
