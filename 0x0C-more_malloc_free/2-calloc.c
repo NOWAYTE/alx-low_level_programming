@@ -11,7 +11,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
-	void *array;
+	int *array;
 
 	if (nmemb == 0 || size == 0)
 	{
@@ -24,10 +24,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	for (i = 0; i != '\0'; i++)
+	for (i = 0; i != nmemb; i++)
 	{
-		array = 0;
+		array[i] = 0;
 	}
 
-	return (array);
+	return (void *)(array);
 }
