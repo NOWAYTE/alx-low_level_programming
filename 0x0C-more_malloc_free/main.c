@@ -5,6 +5,7 @@ int main(void)
 	
 	c = string_nconcat("Best ", "School !!!", 6);
 	printf("%s\n", c);
+	free(c);
 
 	return (0);
 }
