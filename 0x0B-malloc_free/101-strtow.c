@@ -4,7 +4,7 @@
  *
  * @str:character pointer parameter
  *
- * Return: returns pointer to an array of strings 
+ * Return: returns pointer to an array of strings
  */
 char **strtow(char *str)
 {
@@ -18,7 +18,7 @@ char **strtow(char *str)
 		return (NULL);
 	}
 
-	for(s = str; *s != '\0'; s++)
+	for (s = str; *s != '\0'; s++)
 	{
 		if (*s == ' ')
 		{
@@ -44,10 +44,10 @@ char **strtow(char *str)
 
 	string[i] = NULL;
 
-	return string;
+	return (string);
 
 
-	
+
 }
 
 
