@@ -5,7 +5,7 @@
 #include<string.h>
 
 /**
- * struct - data type
+ * struct dog - new type of dog
  * @name: name
  * @age: age
  * @owner: owner
