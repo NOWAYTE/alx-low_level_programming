@@ -1,15 +1,12 @@
-#include "1-pi.h"
+#include "3-function_like_macro.h"
 int main(void)
 {
-	float a;
-	float r;
+	int i;
 
 
-	r = 98;
+	i = ABS(-98) * 10;
 
-	a = PI * r * r;
-
-	printf("%f\n", a);
+	printf("%d\n", i);
 
 	return (0);
 }
