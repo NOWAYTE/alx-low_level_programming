@@ -6,9 +6,9 @@
 
 /**
  * struct - data type
- * @name - name
- * @age - age
- * @owner - owner
+ * @name: name
+ * @age: age
+ * @owner: owner
  */
 
 struct dog
