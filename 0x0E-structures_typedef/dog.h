@@ -1,7 +1,7 @@
 #ifndef DOG_H
 #define DOG_H
 #include<stdio.h>
-#include<std.lib>
+#include<stdlib.h>
 #include<string.h>
 
 /**
