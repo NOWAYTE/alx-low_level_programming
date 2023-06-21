@@ -1,14 +1,17 @@
 #include "function_pointers.h"
-void print_elem(int elem)
+int is_98(int elem)
 {
-	printf("%d", elem);
-
+	return (98 == elem);
 }
+
 int main()
 {
-	int array[5] = {0, 98, 402, 1024, 4096};
+	int index;
 
-	array_iterator(array, 5, &print_elem);
+	int array[5] = {0, 98, 98, 402, 1024};
+
+	index = int_index(array, 5, is_98);
+	printf("%d", index);
 
 	return (0);
 }
