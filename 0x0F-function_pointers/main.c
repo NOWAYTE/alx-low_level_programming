@@ -1,12 +1,14 @@
 #include "function_pointers.h"
-void print_name_as(char *name)
+void print_elem(int elem)
 {
-	printf("Hello, my nameis  %s", name);
+	printf("%d", elem);
 
 }
 int main()
 {
-	print_name("Bob", print_name_as);
+	int array[5] = {0, 98, 402, 1024, 4096};
+
+	array_iterator(array, 5, &print_elem);
 
 	return (0);
 }
