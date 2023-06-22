@@ -1,11 +1,8 @@
 #include "variadic_functions.h"
 int main()
 {
-	int sum;
 
-	sum = sum_them_all(2, 98, 1024);
-
-	printf("%d", sum);
+	print_numbers(",", 2, 98, 1024);
 
 	return (0);
 }
