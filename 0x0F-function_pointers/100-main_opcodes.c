@@ -10,8 +10,9 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	unsigned char x;
 	int y;
+	unsigned char *op;
+	void *ma;
 
 	if (argc != 2)
 	{
@@ -23,12 +24,16 @@ int main(int argc, char *argv[])
 
 	i = atoi(argv[1]);
 
-	x = (unsigned char*)(void *) main;
+	ma = main;
+	op = (unsigned char *)ma;
+
 
 	for (y = 0; y < i; y ++)
 	{
-		printf("%02x", *(x + y));
+		printf("%02x", op[y]);
 	}
+
+	printf("\n");
 
 	return (0);
 }
