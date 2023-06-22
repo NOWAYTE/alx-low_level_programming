@@ -1,8 +1,8 @@
 #include "function_pointers.h"
 /**
- * main - Entry to the program 
+ * main - Entry to the program
  *
- * @argc: argument count 
+ * @argc: argument count
  * @argv: argument vector
  *
  * Return: Always 0 (success)
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	op = (unsigned char *)ma;
 
 
-	for (y = 0; y < i; y ++)
+	for (y = 0; y < i; y++)
 	{
 		printf("%02x", op[y]);
 	}
