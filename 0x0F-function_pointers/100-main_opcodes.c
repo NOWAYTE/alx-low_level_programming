@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 	i = atoi(argv[1]);
 
-	ma = main;
+	ma = &main;
 	op = (unsigned char *)ma;
 
 
