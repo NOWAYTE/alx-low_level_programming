@@ -38,9 +38,10 @@ void print_all(const char * const format, ...)
 
 				}
 				break;
-			i++;
 
 		}
+
+		i++;
 
 	}
 	printf("\n");
