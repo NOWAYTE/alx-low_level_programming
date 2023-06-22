@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
 	i = atoi(argv[1]);
 
-	x = (unsigned char*)main;
+	x = (unsigned char*)(void *) main;
 
 	for (y = 0; y < i; y ++)
 	{
