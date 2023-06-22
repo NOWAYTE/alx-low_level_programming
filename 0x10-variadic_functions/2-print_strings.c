@@ -2,7 +2,7 @@
 /**
  * print_strings - A function that prints strings
  * @separator: strings to be printed btwn strings
- * @n: number of strings passed 
+ * @n: number of strings passed
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
