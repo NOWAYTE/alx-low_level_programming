@@ -1,11 +1,12 @@
 #include "function_pointers.h"
+#include "3-calc.h"
 /**
  * get_op_func - A function tat selects the correct function
  * to perform the operation
  * @s: operator passed as argument
  * Return: corresponding operator
  */
-int (*get_op_func(char *s)(int, int))
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -18,11 +19,7 @@ int (*get_op_func(char *s)(int, int))
 
 	int i;
 
-	for (i = 0; i < != NULL; i++)
-	{
-		if (ops[i].sign != *s && ops[i].sign == NULL)
-			return;
-	}
+	for (i = 0; ops[i].op != NULL && *(ops[i].op) != *s; i++);
 
-	return (ops[i].sign);
+	return (ops[i].f);
 }

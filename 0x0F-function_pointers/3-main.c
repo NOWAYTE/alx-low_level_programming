@@ -1,5 +1,5 @@
-#include "function_pointers.c"
-#include "calc.h"
+#include "function_pointers.h"
+#include "3-calc.h"
 /**
  * main - Entry to the program 
  *
@@ -10,19 +10,18 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	char *i;
 	int x;
 	int y;
 
 	if (argc)
 	{
 		x = atoi(argv[1]);
-		i = atoi(argv[2]);
+		i = argv[2];
 		y = atoi(argv[3]);
 
 	}
-
-	*get_op_func(i)(x, y);
+	printf("%d",get_op_func(i)(x, y));
 
 	return (0);
 }
