@@ -1,1 +1,2 @@
-0x00. C - Hello, World
+arguments to the main (command line arguments);
+
