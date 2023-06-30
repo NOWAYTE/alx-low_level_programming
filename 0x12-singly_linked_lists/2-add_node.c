@@ -8,7 +8,7 @@
  * Return: returns the addres of the new element
  */
 
-list_t *Add_node(list_t **head, const char *str)
+list_t *add_node(list_t **head, const char *str)
 {
 
 	list_t *nd;
