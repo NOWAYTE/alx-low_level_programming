@@ -32,11 +32,11 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	nd->str = strdup(str);
 	nd->len = i;
-	nd-> = NULL;
+	nd->next = NULL;
 
 	if (*head != NULL)
 	{
-		last = *head;
+		ptr = *head;
 
 		while  (ptr->next != NULL)
 		{
