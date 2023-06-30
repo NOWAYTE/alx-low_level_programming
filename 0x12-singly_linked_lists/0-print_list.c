@@ -20,9 +20,9 @@ size_t print_list(const list_t *h)
 
 	for (n = 0; h != NULL; n++)
 	{
-		printf("%u %s \n", h->l, h->str);
+		printf("%u %s \n", h->len, h->str);
 
-		h = h->link;
+		h = h->next;
 		i++;
 	}
 
