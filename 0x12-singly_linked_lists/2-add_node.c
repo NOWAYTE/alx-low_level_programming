@@ -2,8 +2,8 @@
 /**
  * add_node - function that adds a new node
  *
- * @head - head of the list
- * @str - pointer to the lit
+ * @head: head of the list
+ * @str: pointer to the lit
  *
  * Return: returns the addres of the new element
  */
@@ -12,7 +12,7 @@ list_t *add_node(list_t **head, const char *str)
 {
 
 	list_t *nd;
-	
+
 	size_t i = 0;
 
 	while (str[i])
