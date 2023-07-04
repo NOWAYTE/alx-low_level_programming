@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_nodeint_end - Adds a new node at the end 
+ * add_nodeint_end - Adds a new node at the end
  *
  * @head: pointer to head
  * @n: int new node
@@ -10,10 +10,10 @@
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	
-	listint_t n_node;
-	
-	listint_t y;
+
+	listint_t *n_node;
+
+	listint_t *y;
 
 	n_node = malloc(sizeof(listint_t));
 
