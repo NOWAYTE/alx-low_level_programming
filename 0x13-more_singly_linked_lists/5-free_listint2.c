@@ -22,7 +22,7 @@ void free_listint2(listint_t **head)
 	{
 		tr = *head;
 
-		*head = head->next;
+		*head = (*head)->next;
 
 		free(tr);
 
