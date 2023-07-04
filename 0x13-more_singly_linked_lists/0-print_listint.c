@@ -1,15 +1,15 @@
 #include "lists.h"
 /**
- * prints_listint - prints all the elements
+ * print_listint - prints all the elements
  * @h: pointer to head
  *
- * return: the numbers of nodes 
+ * Return: the numbers of nodes
  */
 
 size_t print_listint(const listint_t *h)
 {
-	
-	size_t i =0;
+
+	size_t i = 0;
 
 	while (h)
 	{
