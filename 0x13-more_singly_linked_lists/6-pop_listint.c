@@ -2,7 +2,7 @@
 /**
  * pop_listint - Function that deletes the head node
  *
- * @head: pointer to head 
+ * @head: pointer to head
  *
  * Return: returns the heads node
  *
@@ -23,7 +23,7 @@ int pop_listint(listint_t **head)
 	}
 
 	tr = *head;
-	
+
 	i = tr->n;
 
 	*head = (*head)->next;
