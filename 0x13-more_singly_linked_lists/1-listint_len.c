@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * listint_len - a function that returns the number 
+ * listint_len - a function that returns the number
  * of elements
  * @h: Pointer to head
  *
@@ -15,7 +15,7 @@ size_t listint_len(const listint_t *h)
 
 	while (h != NULL)
 	{
-		
+	
 		i++;
 		x = x->next;
 
