@@ -1,4 +1,4 @@
-#include "lsits.h"
+#include "lists.h"
 /**
  * get_nodeint_at_index - Function that returns the number
  * of node
