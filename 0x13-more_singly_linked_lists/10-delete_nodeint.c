@@ -6,7 +6,7 @@
  *
  * Return: 1 (success) -1 (failed)
  */
-int delete_nodenint_at_index(listint_t **head, unsigned int index)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *tr;
 	listint_t *n_node;
