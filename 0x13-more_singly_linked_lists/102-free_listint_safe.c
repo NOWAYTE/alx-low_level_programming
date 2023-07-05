@@ -30,7 +30,7 @@ size_t free_listint_safe(listint_t **h)
 	f = *h;
 
 
-	while ((s && f) != NULL && f->next != NULL)
+	while ((s && f) != '\0' && f->next != NULL)
 	{
 		tr = s;
 
@@ -39,7 +39,7 @@ size_t free_listint_safe(listint_t **h)
 
 		free(tr);
 
-		i++
+		i++;
 	}
 
 	if (s == f)
