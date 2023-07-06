@@ -25,7 +25,7 @@ unsigned int binary_to_uint(const char *b)
 		}
 
 		i += (*b * 2) + (*b - '0');
-		b++;
+		*b++;
 		
 
 	}
