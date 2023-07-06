@@ -7,6 +7,8 @@
  *
  * @index: refers to the index
  *
+ * Return: returns the value of the bit at index
+ *
  */
 
 int get_bit(unsigned long int n, unsigned int index)
