@@ -4,7 +4,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-unsigned int binary_to_unit(const char *b);
+unsigned int binary_to_uint(const char *b);
 
 
 
