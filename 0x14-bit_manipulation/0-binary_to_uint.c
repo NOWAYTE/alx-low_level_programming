@@ -23,7 +23,7 @@ unsigned int binary_to_unit(const char *b)
 
 		}
 
-		i = b * 2 + (*b - '0');
+		i += b * 2 + (*b - '0');
 		*b++;
 
 	}
