@@ -33,9 +33,15 @@ unsigned int binary_to_uint(const char *b)
 
 		}
 
+
 		b++;
 		x++;
 
+	}
+
+	if (x > 0)
+	{
+		return (0);
 	}
 
 	return (i);
