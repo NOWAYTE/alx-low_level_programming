@@ -1,14 +1,14 @@
 #include "main.h"
 /**
- * binary_to_unit - converts binary to number 
- * @b - pointer to a string 
+ * binary_to_uint - converts binary to number
+ * @b: pointer to a string
  *
- * Return: returns the cionverted number 
+ * Return: returns the cionverted number
  *
  */
 
 unsigned int binary_to_uint(const char *b)
-{ 
+{
 	unsigned int i;
 
 	if (!b)
@@ -39,4 +39,4 @@ unsigned int binary_to_uint(const char *b)
 
 
 
-		
+	
