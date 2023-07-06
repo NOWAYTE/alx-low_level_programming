@@ -10,6 +10,7 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int i;
+	int x = 0;
 
 	if (!b)
 	{
@@ -18,11 +19,12 @@ unsigned int binary_to_uint(const char *b)
 
 	while (*b)
 	{
-		if (*b == '0' && *b == '1')
+		if (x <= 32)
 		{
-			i += (*b *2) + (*b - '0');
-
-			b++;
+			if (*b == '0' || *b == '1')
+			{
+				i += (*b * 2) + (*b - '0');
+			}
 
 		}
 		else
@@ -30,6 +32,9 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 
 		}
+
+		b++;
+		x++;
 
 	}
 
@@ -39,4 +44,4 @@ unsigned int binary_to_uint(const char *b)
 
 
 
-	
+
