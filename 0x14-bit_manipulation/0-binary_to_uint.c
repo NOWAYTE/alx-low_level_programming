@@ -19,8 +19,7 @@ unsigned int binary_to_uint(const char *b)
 
 	while (b[x] == '0' || b[x] == '1')
 	{
-		i <<= 1;
-		i += b[i] - '0';
+		i = (*b * 2) + (*b - '0');
 
 		x++;
 	}
