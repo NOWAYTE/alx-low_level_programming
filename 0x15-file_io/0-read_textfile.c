@@ -2,9 +2,9 @@
 /**
  * read_textfile - reads a text file and prints it to the POSIX
  *
- * @*filename  - pointer to a file 
+ * @filename: pointer to a file
  *
- * @letters - number of letters it should read
+ * @letters: number of letters it should read
  *
  * Return: returns the actual number fo letters it could print
  *
@@ -32,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	while ((c = fgetc(ptr)) != EOF && i < letters)
 	{
 		putchar(c);
-		
+
 		i++;
 
 	}
