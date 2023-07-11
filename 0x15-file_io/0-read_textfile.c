@@ -12,9 +12,8 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	size_t read;
+	size_t i;
 	char c;
-	char cha;
 
 	FILE *ptr = NULL;
 
@@ -30,15 +29,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	while (c = fgetc(ptr) != EOF)
+	while ((c = fgetc(ptr)) != EOF && i < letters)
 	{
-		cha = fgetc(c);
+		putchar(c);
+		
+		i++;
 
 	}
 
 	fclose(ptr);
 
-	return (cha);
+	return (i);
 
 }
 
