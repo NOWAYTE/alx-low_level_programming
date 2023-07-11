@@ -12,6 +12,7 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	char *pt;
 	size_t i;
 	char c;
 
@@ -35,6 +36,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 		i++;
 
+	}
+
+	pt = malloc(sizeof(char) * letters);
+
+	if (pt == NULL)
+	{
+		return (0);
+	}
+
+	while ((c = fgetc(ptr)) != EOF && i < letters)
+	{
+		write(STDOUT_FILENO, &c, 1);
 	}
 
 	fclose(ptr);
