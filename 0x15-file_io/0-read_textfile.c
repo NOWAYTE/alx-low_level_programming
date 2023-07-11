@@ -46,13 +46,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	write_n = write(STDOUT_FILENO, pt, 1);
-
-	if (write_n != 1 || write_n == -1)
-	{
-		return (0);
-	}
-
 	free(pt);
 
 	fclose(ptr);
