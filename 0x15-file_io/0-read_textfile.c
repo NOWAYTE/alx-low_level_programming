@@ -47,8 +47,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	while ((c = fgetc(ptr)) != EOF && i < letters)
 	{
-		write(STDOUT_FILENO, &c, 1);
+		write(STDOUT_FILENO, pt, 1);
 	}
+
+	free(pt);
 
 	fclose(ptr);
 
