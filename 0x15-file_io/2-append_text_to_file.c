@@ -3,13 +3,13 @@
  * append_text_to_file - function that appends text at the end of file
  *
  * @filename: pointer to a file
- * @text_content: string to add at the end of the file 
+ * @text_content: string to add at the end of the file
  *
- * Return 1 (success)
+ * Return: 1 (success)
  *
  */
 
-int append_text_to_file(const char *filename,char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 
 	FILE *ptr;
@@ -21,7 +21,7 @@ int append_text_to_file(const char *filename,char *text_content)
 		return (-1);
 
 	}
-	
+
 	if (text_content == NULL)
 	{
 		return (-1);
@@ -35,7 +35,7 @@ int append_text_to_file(const char *filename,char *text_content)
 		return (-1);
 	}
 
-	while (text_content[i] != '\0')
+	while (*text_content != '\0')
 	{
 		i++;
 
