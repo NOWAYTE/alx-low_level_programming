@@ -15,6 +15,7 @@ int append_text_to_file(const char *filename,char *text_content)
 	FILE *ptr;
 	int i;
 
+
 	if (filename == NULL)
 	{
 		return (-1);
@@ -34,7 +35,7 @@ int append_text_to_file(const char *filename,char *text_content)
 		return (-1);
 	}
 
-	while (*text_content != '\0')
+	while (text_content[i] != '\0')
 	{
 		i++;
 
