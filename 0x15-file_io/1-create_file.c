@@ -10,7 +10,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	FILE *ptr = NULL;
+	int ptr;
 
 	if (filename == NULL)
 	{
@@ -20,13 +20,13 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content == NULL)
 	{
-			ptr = fopen(filename, "rw");
+			ptr = open(filename, "rw");
 
 			return (1);
 
 	}
 
-	ptr = fopen(filename, "rw");
+	ptr = open(filename, "rw");
 
 	if (ptr == NULL)
 	{
@@ -35,7 +35,7 @@ int create_file(const char *filename, char *text_content)
 	}
 
 
-	fclose(ptr);
+	close(ptr);
 
 
 	return (1);
