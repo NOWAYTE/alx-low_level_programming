@@ -6,7 +6,7 @@
  *
  * @letters: number of letters it should read
  *
- * Return: returns the actual number of letters 
+ * Return: returns the actual number of letters
  * it could read
  */
 
@@ -32,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	buff = malloc(sizeof(char) * letters + 1);
 
-	read_n = fread(buff, 1,letters, ptr);
+	read_n = fread(buff, 1, letters, ptr);
 
 	if (read_n != 1)
 	{
@@ -48,12 +48,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	}
 
-	return read_n;
+	return (read_n);
 
 }
 
-	
 
 
 
-	
+
+
