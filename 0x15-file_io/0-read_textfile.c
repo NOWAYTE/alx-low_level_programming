@@ -38,7 +38,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	}
 
-	read_n = fread(ptr, buff, letters);
+	read_n = fread(buff , 1, letters, ptr);
 
 	if (read_n != 1)
 	{
