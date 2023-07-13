@@ -30,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	}
-	buff = malloc(sizeof(char) * letters + 1);
+	buff = malloc(sizeof(char) * letters);
 
 	read_n = fread(buff, 1, letters, ptr);
 
