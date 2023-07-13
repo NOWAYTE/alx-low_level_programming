@@ -2,32 +2,29 @@
 /**
  * create_file - function that creates a file
  *
- * @filename: pointer to a file
+ * @filename: pointer to a file 
+ * @text_content: string to write on the file
  *
- * @text_content: string to write 
- * 
- * Return: 1 (success)
- *
+ * Return: Always 1 (success)
  */
 
 int create_file(const char *filename, char *text_content)
 {
-	int len = 0;
-	int i = 0;
 	FILE *ptr = NULL;
 
 	if (filename == NULL)
 	{
 		return (-1);
+
 	}
 
 	if (text_content == NULL)
 	{
-		ptr = fopen(filename, "w");
+			return (-1);
 
 	}
 
-	ptr = fopen(filename, "w");
+	ptr = fopen(filename, "rw");
 
 	if (ptr == NULL)
 	{
@@ -35,25 +32,13 @@ int create_file(const char *filename, char *text_content)
 
 	}
 
-	for (len = 0; text_content[len] != '\0'; len++)
-	{
-		i = fwrite(text_content, len, 1, ptr);
-		if (i == -1)
-		{
-			fclose(ptr);
-			return (-1);
-
-		}
-
-	}
 
 	fclose(ptr);
 
-	return (-1);
+
+	return (1);
 
 }
-
-
 
 
 
