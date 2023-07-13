@@ -48,12 +48,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	write_n = write(STDOUT_FILENO, buff, read_n);
 
-	if (write_n != 1)
+	if (write_n == -1)
 	{
 		return (0);
 
 	}
 	free(buff);
+
+	close(ptr);
 
 	return (read_n);
 
