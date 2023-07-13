@@ -13,7 +13,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *ptr = NULL;
-	size_t read_n, write_n;
+	ssize_t read_n, write_n;
 	char *buff = NULL;
 
 
@@ -40,13 +40,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	read_n = fread(buff , 1, letters, ptr);
 
-	if (read_n != 1)
+	if (read_n == -1)
 	{
 		return (0);
 
 	}
 
-	write_n = write(STDOUT_FILENO, buff, 1);
+	write_n = write(STDOUT_FILENO, buff, read_n);
 
 	if (write_n != 1)
 	{
