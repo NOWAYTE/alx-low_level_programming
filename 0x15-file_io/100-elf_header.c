@@ -52,14 +52,14 @@ int main( int argc, char  **argv)
 		return(98);
 
 	}
-	printf("Magic: %x\n", head.e_ident[EI_MAG0]);
+	printf("Magic: %dx\n", head.e_ident[EI_MAG0]);
 	printf("Class: %x\n", head.e_ident[EI_CLASS]);
 	printf("Data: %x\n", head.e_ident[EI_DATA]);
 	printf("Version: %x\n", head.e_ident[EI_VERSION]);
 	printf("OS/ABI: %x\n", head.e_ident[EI_OSABI]);
 	printf("ABI Version: %x\n", head.e_ident[EI_ABIVERSION]);
 	printf("Type: %x\n", head.e_type);
-	printf("Entry point address: %x\n", head.e_entry);
+	printf("Entry point address: %ld\n", head.e_entry);
 
 	close(file);
 
