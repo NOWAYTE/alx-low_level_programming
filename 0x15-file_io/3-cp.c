@@ -1,69 +1,96 @@
 #include "main.h"
 /**
- * main - Entry to the program 
+ * main - Entry to the program
  *
- * @argc: argument count 
+ * @argc - argument count 
+ * @argv: argumnet vector
  *
- * @argv: argument vector
- *
- * Return: Always 0 (success);
- *
+ * Return: Always 0 (success)
  */
 
 int main (int argc, char *argv[])
 {
-	int x;
-	int y;
-	size_t read_b;
-	char z[1024];
+	int file_from;
+	int file_to;
+	ssize_t read_n;
+	ssize_t write_n;
+
+	char buffer[1024];
 
 	if (argc != 3)
 	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to \n");
 
-		dprintf(2, "Usage : cp file_from file_to \n");
-
-		exit(97);
-
-	}
-
-	x = open(argv[1], O_RDONLY);
-
-	if (x == -1)
-	{
-		dprintf(2, "Error : Can't read from file %s \n", argv[1]);
-
-		exit(98);
+		exit (97);
 
 	}
 
-	y = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	file_from = open(argv[1], O_RDONLY);
 
-	if (y == -1)
+	if (file_from == -1)
 	{
+		dprintf(STDERR_FILENO, "Error: can't read from file %s \n",  argv[1]);
 
-		dprintf(2, "Error: Can't write to file %s \n", argv[2]);
+		exit (98);
+
+	}
+
+	file_to =  open(argv[2], O_RDONLY | O_CREAT | O_TRUNC | O_RDWR);
+
+	if (file_to == -1)
+	{
+		dprintf(2 , "Error: can't write to %s \n ", argv[2]);
 
 		exit(99);
 
 	}
 
-	read_b = read(x, z, sizeof(z));
+	read_n = read(file_from, buffer, 1);
 
-	while (read_b)
+	if (read_n == -1)
 	{
-		write(x , z, read_b);
+		dprintf(2, "Error: Can't write to %s \n ", argv[1]);
+
+		exit(99);
 
 	}
 
-	close(x);
-	
-	close(y);
+	while(read_n)
+	{
+		write_n = write(file_from, buffer, read_n);
+
+		if (write_n != read_n)
+		{
+			dprintf(2, "Error: can't write to %s \n", argv[1]);
+
+			close(file_from);
+
+			close(file_to);
+
+			exit(99);
+
+		}
+
+	}
+
+	if (close(read_n) == -1)
+	{
+		dprintf(2, "Error can't close fd %d \n", file_to);
+		
+		exit(100);
+
+	}
+
+	if (close(write_n) == -1)
+	{
+		dprintf(2, "Error can't close fd %d  \n", file_from);
+
+		exit(100);
+
+	}
+
 
 	return (0);
 
-
-
 }
-
-
 
