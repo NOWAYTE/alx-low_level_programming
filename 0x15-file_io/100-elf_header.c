@@ -1,15 +1,15 @@
 #include "main.h"
 /**
- * main - Entry to the program 
+ * main - Entry to the program
  *
- * @argc: argument count 
+ * @argc: argument count
  * @argv: argument vector
  *
  * Return: Always 0 (success)
  *
  */
 
-int main( int argc, char  **argv)
+int main(int argc, char  **argv)
 {
 	int file;
 	ssize_t read_n;
@@ -49,7 +49,7 @@ int main( int argc, char  **argv)
 	{
 		printf("Error: Not an ELF file %s", argv[1]);
 
-		return(98);
+		return (98);
 
 	}
 	printf("Magic: %dx\n", head.e_ident[EI_MAG0]);
@@ -63,7 +63,7 @@ int main( int argc, char  **argv)
 
 	close(file);
 
-	return(0);
+	return (0);
 
 }
 
