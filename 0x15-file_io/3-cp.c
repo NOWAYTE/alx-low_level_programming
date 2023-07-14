@@ -2,13 +2,13 @@
 /**
  * main - Entry to the program
  *
- * @argc - argument count 
+ * @argc: argument count
  * @argv: argumnet vector
  *
  * Return: Always 0 (success)
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int file_from;
 	int file_to;
@@ -21,7 +21,7 @@ int main (int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to \n");
 
-		exit (97);
+		exit(97);
 
 	}
 
@@ -31,11 +31,11 @@ int main (int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: can't read from file %s \n",  argv[1]);
 
-		exit (98);
+		exit(98);
 
 	}
 
-	file_to =  open(argv[2], O_RDONLY | O_CREAT | O_TRUNC, 0664);
+	file_to =  open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
 
 	if (file_to == -1)
 	{
@@ -45,19 +45,19 @@ int main (int argc, char *argv[])
 
 	}
 
-	read_n = read(file_to, buffer, 1024);
-
-	if (read_n == -1)
+	while (read_n > 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s \n ", argv[1]);
 
-		exit(99);
+		read_n = read(file_from, buffer, 1024);
 
-	}
+		if (read_n == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: can't read from file %s \n", argv[1]);
+			exit(98);
 
-	while(read_n > 0)
-	{
-		write_n = write(file_from, buffer, read_n);
+		}
+
+		write_n = write(file_to, buffer, read_n);
 
 		if (write_n == -1)
 		{
@@ -76,7 +76,7 @@ int main (int argc, char *argv[])
 	if (close(file_from) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error can't close fd %d \n", file_to);
-		
+
 		exit(100);
 
 	}
