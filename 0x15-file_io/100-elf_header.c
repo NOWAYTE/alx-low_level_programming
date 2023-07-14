@@ -14,8 +14,6 @@ int main( int argc, char  **argv)
 	int file;
 	ssize_t read_n;
 	Elf64_Ehdr head;
-	unsigned char elf_header[64];
-
 
 	if (argc != 2)
 	{
@@ -54,14 +52,14 @@ int main( int argc, char  **argv)
 		return(98);
 
 	}
-	printf("Magic: %x\n", elf_header[0]);
-	printf("Class: %x\n", elf_header[1]);
-	printf("Data: %x\n", elf_header[2]);
-	printf("Version: %x\n", elf_header[3]);
-	printf("OS/ABI: %x\n", elf_header[4]);
-	printf("ABI Version: %x\n", elf_header[5]);
-	printf("Type: %x\n", elf_header[6]);
-	printf("Entry point address: %x\n", *(unsigned int *)(&elf_header[20]));
+	printf("Magic: %d\n", head.e_ident[EI_MAG0]);
+	printf("Class: %x\n", head.e_ident[EI_CLASS]);
+	printf("Data: %x\n", head.e_ident[EI_DATA]);
+	printf("Version: %x\n", head.e_ident[EI_VERSION]);
+	printf("OS/ABI: %x\n", head.e_ident[EI_OSABI]);
+	printf("ABI Version: %x\n", head.e_ident[EI_ABIVERSION]);
+	printf("Type: %x\n", head.e_type);
+	printf("Entry point address: %ld\n", head.e_entry);
 
 	close(file);
 
