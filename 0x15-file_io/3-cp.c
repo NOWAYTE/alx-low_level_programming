@@ -39,7 +39,7 @@ int main (int argc, char *argv[])
 
 	if (file_to == -1)
 	{
-		dprintf(2 , "Error: can't write to %s \n ", argv[2]);
+		dprintf(STDERR_FILENO, "Error: can't write to %s \n ", argv[2]);
 
 		exit(99);
 
@@ -49,19 +49,19 @@ int main (int argc, char *argv[])
 
 	if (read_n == -1)
 	{
-		dprintf(2, "Error: Can't write to %s \n ", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s \n ", argv[1]);
 
 		exit(99);
 
 	}
 
-	while(read_n)
+	while(read_n > 0)
 	{
 		write_n = write(file_from, buffer, read_n);
 
 		if (write_n == -1)
 		{
-			dprintf(2, "Error: can't write to %s \n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: can't write to %s \n", argv[1]);
 
 			close(file_from);
 
@@ -73,17 +73,17 @@ int main (int argc, char *argv[])
 
 	}
 
-	if (close(read_n) == -1)
+	if (close(file_from) == -1)
 	{
-		dprintf(2, "Error can't close fd %d \n", file_to);
+		dprintf(STDERR_FILENO, "Error can't close fd %d \n", file_to);
 		
 		exit(100);
 
 	}
 
-	if (close(write_n) == -1)
+	if (close(file_to) == -1)
 	{
-		dprintf(2, "Error can't close fd %d  \n", file_from);
+		dprintf(STDERR_FILENO, "Error can't close fd %d  \n", file_from);
 
 		exit(100);
 
