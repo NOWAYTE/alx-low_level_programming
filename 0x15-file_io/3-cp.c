@@ -35,7 +35,7 @@ int main (int argc, char *argv[])
 
 	}
 
-	file_to =  open(argv[2], O_RDONLY | O_CREAT | O_TRUNC | O_RDWR);
+	file_to =  open(argv[2], O_RDONLY | O_CREAT | O_TRUNC, 0664);
 
 	if (file_to == -1)
 	{
@@ -45,7 +45,7 @@ int main (int argc, char *argv[])
 
 	}
 
-	read_n = read(file_from, buffer, 1);
+	read_n = read(file_to, buffer, 1024);
 
 	if (read_n == -1)
 	{
@@ -59,7 +59,7 @@ int main (int argc, char *argv[])
 	{
 		write_n = write(file_from, buffer, read_n);
 
-		if (write_n != read_n)
+		if (write_n == -1)
 		{
 			dprintf(2, "Error: can't write to %s \n", argv[1]);
 
