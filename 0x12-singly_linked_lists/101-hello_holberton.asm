@@ -1,26 +1,17 @@
 section .data
-	message db 'Hello, Hoblerton', 0Ah
+	message db "Hello, Hobleton", 0
 
 section .text
-	global _start
+	global main
 
-_start:
-	:write message to stdout
+	extern printf 
 
-	move rax, 1
+main:
 
-	move rdi, i
+	push message 
 
-	mov rsi, message
-	mov rdx, 16
-	syscall
+	call printf 
 
-	; exit with code status 0
-	mov rax, 60
+	add rsp, 8
 
-	xor rdi, rdi
-
-	syscall
-
-
-
+	ret
