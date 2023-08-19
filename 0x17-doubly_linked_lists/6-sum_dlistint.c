@@ -15,7 +15,7 @@ int sum_dlistint(dlistint_t *head)
 	{
 
 		
-		x += i->n;
+		x += y->n;
 	}
 
 
