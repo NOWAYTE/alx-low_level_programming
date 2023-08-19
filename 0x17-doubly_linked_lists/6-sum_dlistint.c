@@ -11,7 +11,7 @@ int sum_dlistint(dlistint_t *head)
 	int x = 0;
 	dlistint_t *y;
 
-	for (i = head; i != NULL; i = i->next)
+	for (y = head; y != NULL; y = y->next)
 	{
 
 		
