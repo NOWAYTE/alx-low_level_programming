@@ -101,52 +101,52 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	{
 
 		free(v_copy);
-		free(new);
+		free(n);
 		return (0);
 	}
-	new->value = v_copy;
-	new->next = ht->array[index];
-	ht->array[index] = new;
+	n->value = v_copy;
+	n->next = ht->array[x];
+	ht->array[x] = n;
 
 	if (ht->shead == NULL)
 	{
 
-		new->sprev = NULL;
-		new->snext = NULL;
-		ht->shead = new;
-		ht->stail = new;
+		n->sprev = NULL;
+		n->snext = NULL;
+		ht->shead = n;
+		ht->stail = n;
 	}
 	else if (strcmp(ht->shead->key, key) > 0)
 	{
 
-		new->sprev = NULL;
-		new->snext = ht->shead;
-		ht->shead->sprev = new;
-		ht->shead = new;
+		n->sprev = NULL;
+		n->snext = ht->shead;
+		ht->shead->sprev = n;
+		ht->shead = n;
 	}
 	else
 	{
 
-		tmp = ht->shead;
+		t = ht->shead;
 		while (t->snext != NULL && strcmp(t->snext->key, key) < 0)
 		{
 			t = t->snext;
 
 		}
-		new->sprev = t;
-		new->snext = t->snext;
+		n->sprev = t;
+		n->snext = t->snext;
 		if (t->snext == NULL)
 		{
-			ht->stail = new;
+			ht->stail = n;
 
 		}
 		else
 		{
 
-			t->snext->sprev = new;
+			t->snext->sprev = n;
 		}
 
-		t->snext = new;
+		t->snext = n;
 	}
 
 	return (1);
@@ -183,7 +183,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 
 	n = ht->shead;
 
-	while (n != NULL && strcmp(node->key, key) != 0)
+	while (n != NULL && strcmp(n->key, key) != 0)
 	{
 
 		n = n->snext;
