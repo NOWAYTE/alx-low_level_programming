@@ -1,23 +1,31 @@
-CC = gcc 
-SRC = *.C
-OBJ = $(SRC:.c=.o)
+CC = gcc
+SRC = main.c school.c
 NAME = school
-RM = rm
+
 CFLAGS = -Wall -Werror -Wextra -pedantic
-.PHONY:all clean oclean fclean re
+
+OBJ := $(patsubst %.c, %.o, $(SRC))
+
+ifeq ($(wildcard m.h),)
+    $(error Header file m.h not found)
+endif
+
+.PHONY: all clean oclean fclean re
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) -o $@ $^
+
+$(OBJ): %.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	$(RM) -rf *~$(NAME)
+	-$(RM) *~ $(NAME) $(OBJ) 2>/dev/null
 
 oclean:
-	$(RM) -rf $(OBJ)
+	-$(RM) $(OBJ) 2>/dev/null
 
 fclean: clean oclean
-re: fclean all
 
--include m.h
+re: fclean all
