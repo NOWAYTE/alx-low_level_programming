@@ -13,9 +13,6 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-$(OBJ): %.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
-
 clean:
 	-$(RM) *~ $(NAME) $(OBJ) 2>/dev/null
 
