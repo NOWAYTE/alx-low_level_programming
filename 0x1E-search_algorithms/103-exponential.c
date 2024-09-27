@@ -9,7 +9,7 @@
  * @value: the value to search for
  * Return: index where value is located, or -1 if not found
  */
-int binary_search(int *array, size_t left, size_t right, int value)
+int b_search(int *array, size_t left, size_t right, int value)
 {
     size_t mid, i;
 
@@ -67,6 +67,6 @@ int exponential_search(int *array, size_t size, int value)
     printf("Value found between indexes [%ld] and [%ld]\n", bound / 2, min);
 
     /* Perform binary search in the found range */
-    return (binary_search(array, bound / 2, min, value));
+    return (b_search(array, bound / 2, min, value));
 }
 
